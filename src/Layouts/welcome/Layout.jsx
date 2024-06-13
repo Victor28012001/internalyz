@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
             <div className="flex w-[100%]">
                 <div className="relative w-full flex flex-col bg-blueGray-100">
                     < Navbar />
-                    <div className='mt-[6rem] h-[100%] py-3 flex items-center justify-center'>
+                    <div className='h-[100%] py-3 flex items-center justify-center'>
                         {children}
                     </div>
                     {/* <Footer/> */}

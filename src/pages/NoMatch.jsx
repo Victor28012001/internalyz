@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from '../Layouts/welcome/Layout'
 
 const NoMatch = () => {
   return (
-    <div>
+    <Layout>
       <h1>404</h1>
-    </div>
+    </Layout>
   )
 }
 

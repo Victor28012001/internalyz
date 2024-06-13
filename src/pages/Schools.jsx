@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from "../Layouts/welcome/Layout"
 
 const Schools = () => {
   return (
-    <div>
+    <Layout>
       <h1>Schools</h1>
-    </div>
+    </Layout>
   )
 }
 

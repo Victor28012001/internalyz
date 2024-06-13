@@ -1,36 +1,107 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Dialog, DialogPanel } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
+import logo from "public/logo.png"
+
 
 const Navbar = () => {
+    
+  const navigation = [
+    { name: 'About', href: '/about' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Opportunities', href: '/opportunities' },
+    { name: 'Schools', href: '/schools' },
+  ]
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+
     return (
         <>
-            <nav className="flex items-center justify-between flex-wrap p-6">
-                <div className="flex items-center flex-shrink-0 text-white mr-6">
-                    <svg className="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" /></svg>
-                    <span className="font-semibold text-xl tracking-tight text-teal-500">Tailwind CSS</span>
-                </div>
-                <div className="block lg:hidden">
-                    <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-teal-500 hover:border-teal-500">
-                        <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-                    </button>
-                </div>
-                <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                    <div className="text-sm lg:flex-grow">
-                        <Link to="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-500 hover:text-white mr-4">
-                            Docs
-                        </Link>
-                        <Link to="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-500 hover:text-white mr-4">
-                            Examples
-                        </Link>
-                        <Link to="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-500 hover:text-white">
-                            Blog
+            <header className="absolute inset-x-0 top-0 z-50">
+                <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                    <div className="flex lg:flex-1">
+                        <Link to="/" className="-m-1.5 p-1.5">
+                            <span className="sr-only">Your Company</span>
+                            <img
+                                className="h-8 w-auto"
+                                src={logo}
+                                alt=""
+                            />
                         </Link>
                     </div>
-                    <div>
-                        <Link to="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-teal-500 border-teal-500 hover:border-transparent hover:text-white hover:bg-teal-500 mt-4 lg:mt-0">Download</Link>
+                    <div className="flex lg:hidden">
+                        <button
+                            type="button"
+                            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                            onClick={() => setMobileMenuOpen(true)}
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                        </button>
                     </div>
-                </div>
-            </nav>
+                    <div className="hidden lg:flex lg:gap-x-12">
+                        {navigation.map((item) => (
+                            <Link key={item.name} to={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                        <Link to="#" className="text-sm font-semibold leading-6 text-gray-900">
+                            Log in <span aria-hidden="true">&rarr;</span>
+                        </Link>
+                    </div>
+                </nav>
+                <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+                    <div className="fixed inset-0 z-50" />
+                    <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                        <div className="flex items-center justify-between">
+                            <Link to="#" className="-m-1.5 p-1.5">
+                                <span className="sr-only">Your Company</span>
+                                <img
+                                    className="h-8 w-auto"
+                                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                    alt=""
+                                />
+                            </Link>
+                            <button
+                                type="button"
+                                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                <span className="sr-only">Close menu</span>
+                                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                            </button>
+                        </div>
+                        <div className="mt-6 flow-root">
+                            <div className="-my-6 divide-y divide-gray-500/10">
+                                <div className="space-y-2 py-6">
+                                    {navigation.map((item) => (
+                                        <Link
+                                            key={item.name}
+                                            to={item.href}
+                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                                <div className="py-6">
+                                    <Link
+                                        to="#"
+                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    >
+                                        Log in
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </DialogPanel>
+                </Dialog>
+            </header>
         </>
     )
 }

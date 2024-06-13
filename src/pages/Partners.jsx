@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from '../Layouts/welcome/Layout'
 
 const Partners = () => {
   return (
-    <div>
+    <Layout>
       <h1>Partners</h1>
-    </div>
+    </Layout>
   )
 }
 
