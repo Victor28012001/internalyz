@@ -7,8 +7,7 @@ import { FaSortDown } from "react-icons/fa6";
 
 const Settings = () => {
 
-  // const childrens = item.childrens;
-  // {items.map((item, index) => <SidebarItem key={index} item={item} />)}
+  
 
   return (
     <Dashboards>
