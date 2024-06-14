@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
     return (
@@ -10,7 +11,7 @@ const Layout = ({ children }) => {
                     <div className='h-[100%] py-3 flex items-center justify-center'>
                         {children}
                     </div>
-                    {/* <Footer/> */}
+                    <Footer/>
                 </div>
             </div>
         </>

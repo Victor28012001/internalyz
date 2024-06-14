@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Lorem",
+        "path": "Inbox",
+        "childrens": [
+            {
+                "title": "Active",
+                "path": "/active-inbox"
+            },
+            {
+                "title": "Closed",
+                "path": "/closed-inbox"
+            },
+            {
+                "title": "All Conversations",
+                "path": "/all-conversations"
+            }
+        ]
+    },
+    {
+        "title": "Lorem",
+        "path": "/Agents",
+        "childrens": [
+            {
+                "title": "Active",
+                "path": "/active-agents"
+            },
+            {
+                "title": "Offline",
+                "path": "/offline-agents"
+            },
+            {
+                "title": "All Agents",
+                "path": "/all-agents"
+            }
+        ]
+    },
+    {
+        "title": "Lorem",
+        "path": "Inbox",
+        "childrens": [
+            {
+                "title": "Active",
+                "path": "/active-inbox"
+            },
+            {
+                "title": "Closed",
+                "path": "/closed-inbox"
+            },
+            {
+                "title": "All Conversations",
+                "path": "/all-conversations"
+            }
+        ]
+    },
+    {
+        "title": "Lorem",
+        "path": "/Agents",
+        "childrens": [
+            {
+                "title": "Active",
+                "path": "/active-agents"
+            },
+            {
+                "title": "Offline",
+                "path": "/offline-agents"
+            },
+            {
+                "title": "All Agents",
+                "path": "/all-agents"
+            }
+        ]
+    }
+]

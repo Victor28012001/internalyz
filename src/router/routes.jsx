@@ -3,7 +3,21 @@ import Schools from "../pages/Schools";
 import Partners from "../pages/Partners";
 import Opportunities from "../pages/Opportunities";
 import About from "../pages/About";
-import NoMatch from "../pages/NoMatch"
+import NoMatch from "../pages/NoMatch";
+
+
+
+import Signup from "../pages/auth/Signup"
+
+
+
+import Agents from "../pages/dashboard/Agents"
+import Contacts from "../pages/dashboard/Contacts"
+import Dashboard from "../pages/dashboard/Dashboard"
+import Inbox from "../pages/dashboard/Inbox"
+import Logout from "../pages/dashboard/Agents"
+import Settings from "../pages/dashboard/Settings"
+import SettingsItem from "../pages/dashboard/SettingsItem"
 
 import { createBrowserRouter } from "react-router-dom";
 
@@ -51,6 +65,61 @@ import { createBrowserRouter } from "react-router-dom";
         element: <NoMatch />,
       },
 
+
+
+      
+    {
+      name: "Signup",
+      path: "/signup",
+      exact: true,
+      element: <Signup />,
+    },
+
+
+
+      
+    {
+      name: "Agents",
+      path: "/agents",
+      exact: true,
+      element: <Agents />,
+    },
+    {
+      name: "Contacts",
+      path: "/contacts",
+      exact: true,
+      element: <Contacts />,
+    },
+    {
+      name: "Dashboard",
+      path: "/dashboard",
+      exact: true,
+      element: <Dashboard />,
+    },
+    {
+      name: "Inbox",
+      path: "/inbox",
+      exact: true,
+      element: <Inbox />,
+    },
+    {
+      name: "Logout",
+      path: "/logout",
+      exact: true,
+      element: <Logout />,
+    },
+    {
+      name: "Settings",
+      path: "/settings",
+      exact: true,
+      element: <Settings />,
+    },
+    {
+      name: "SettingsItem",
+      path: "/settingsItem",
+      exact: true,
+      element: <SettingsItem />,
+    },
 ])
 
 export default routes
