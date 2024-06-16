@@ -37,9 +37,9 @@ const Userdetails = ({ nextStep, handleChange, values }) => {
 
 
     return (
-        <div className='flex flex-col justify-around items-center scroll-py-60 h-screen w-screen'>
+        <div className='flex flex-col scroll-py-60 h-screen w-screen overflow-y-hidden'>
             <Navbar />
-            <div className='flex flex-row scroll-py-60 h-[80%] w-[100%] bg-red pl-24'>
+            <div className='flex flex-row scroll-py-60 h-[80%] w-[100%] bg-red pl-24 mt-[100px]'>
                 <div className="relative h-[80%] w-[60%] flex flex-col justify-start">
                     <h1 className="font-['Poppins'] font-[700] text-[36px] leading-[54px] text-[#344266] mb-2 self-start">
                         Set Up Your Live Chat

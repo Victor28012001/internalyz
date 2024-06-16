@@ -75,7 +75,7 @@ function App() {
               </div>
             </div>) : (
             <div className="relative h-[90%] w-full flex justify-center items-center overflow-hidden">
-              <div className="bg-white relative overflow-hidden box-border border-[8px] border-solid border-black shadow-[0_0_0_0_#333] w-[100%] h-[450px] rounded-[40px]">
+              <div className="bg-white relative overflow-hidden box-border border-[8px] border-solid border-black shadow-[0_0_0_0_#333] w-[700px] h-[450px] rounded-[40px]">
                 <div className="absolute bg-[#000] top-0 h-4 w-24 z-[100] left-[50%] translate-x-[-50%] rounded-br-[10px] rounded-bl-[10px] before:content-[''] before:absolute before:h-1 before:w-8 before:top-[7px] before:left-[10px] before:rounded-[10px] before:border-[0.03em] before:border-solid before:border-[rgba(51,51,51, 0.479)] before:shadow-inner-[0_0_0_0_rgba(51,51,51,0.712)] after:content-[''] after:absolute after:h-[7px] after:w-[7px] after:top-[5px] after:right-[20px] after:rounded-[50%] after:bg-[#333]"></div>
                 {/* <img src={phone} alt="" className='pt-8 pb-8' /> */}
               </div>

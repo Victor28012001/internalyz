@@ -24,33 +24,38 @@
         ]
     },
     {
-        "title": "Agents",
+        "title": "Applications",
         "icon": "avatar-default-svgrepo-com 2.svg",
         "path": "/Agents",
         "childrens": [
             {
-                "title": "Active",
+                "title": "Accepted",
                 "path": "/active-agents"
             },
             {
-                "title": "Offline",
+                "title": "Pending",
                 "path": "/offline-agents"
             },
             {
-                "title": "All Agents",
+                "title": "Pejected",
                 "path": "/all-agents"
             }
         ]
     },
     {
-        "title": "Contact",
+        "title": "Opportunities",
         "icon": "contact-new-svgrepo-com 1.svg",
         "path": "/Contacts"
     },
     {
-        "title": "Settings",
+        "title": "POL",
         "icon": "settings-svgrepo-com 1.svg",
         "path": "/Settings"
+    },
+    {
+        "title": "Schedule",
+        "icon": "Vector(3).svg",
+        "path": "/Logout"
     },
     {
         "title": "Logout",

@@ -51,7 +51,7 @@ const Navbar = () => {
                         ))}
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <Link to="#" className="text-sm font-semibold leading-6 text-gray-900">
+                        <Link to="/calendar" className="text-sm font-semibold leading-6 text-gray-900">
                             Log in <span aria-hidden="true">&rarr;</span>
                         </Link>
                     </div>
@@ -92,7 +92,7 @@ const Navbar = () => {
                                 </div>
                                 <div className="py-6">
                                     <Link
-                                        to="#"
+                                        to="/calendar"
                                         className="-mx-3 block rounded-lg px-3 py-2.5 text-center font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     >
                                         Log in

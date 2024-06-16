@@ -12,13 +12,13 @@ const Livechat = ({ prevStep, nextStep, handleChange, values }) => {
 
 
   return (
-    <div className='flex flex-col content-center scroll-py-1/4 items-center h-screen w-screen'>
+    <div className='flex flex-col content-center scroll-py-1/4 h-screen w-screen overflow-y-hidden'>
 
       <Navbar />
 
-      <div className='flex flex-col justify-around content-center scroll-py-1/4 h-screen w-[85%]'>
+      <div className='flex flex-col justify-around items-center scroll-py-1/4 h-screen w-[100%]'>
 
-        <div className="flex flex-row w-1/2 ml-12">
+        <div className="flex flex-row w-1/2 ml-12 self-start ml-12">
 
           <h1 className="font-['Poppins'] font-[700] text-[36px] leading-[54px] text-[#344266] mb-12">
             Add Live Chat to your Website
@@ -70,7 +70,7 @@ const Livechat = ({ prevStep, nextStep, handleChange, values }) => {
             <div className="flex flex-col justify-between">
 
               <button onClick={Continue} className="h-[50px] bg-[#3592FF] rounded py-2 font-semibold text-sm text-white mb-5 mx-0">
-                Continue
+                Submit
               </button>
 
 

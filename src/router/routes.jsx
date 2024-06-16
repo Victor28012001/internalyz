@@ -19,6 +19,12 @@ import Logout from "../pages/dashboard/Agents"
 import Settings from "../pages/dashboard/Settings"
 import SettingsItem from "../pages/dashboard/SettingsItem"
 
+
+
+import Calendars from "../pages/calendar/Calendar";
+import Projects from "../pages/projects/Projects";
+import Teams from "../pages/teams/Teams";
+
 import { createBrowserRouter } from "react-router-dom";
 
  const routes = createBrowserRouter([
@@ -60,8 +66,8 @@ import { createBrowserRouter } from "react-router-dom";
 
     {
         name: "NoMatch",
-        path: "/noMatch",
-        exact: true,
+        path: "/*",
+        exact: false,
         element: <NoMatch />,
       },
 
@@ -119,6 +125,29 @@ import { createBrowserRouter } from "react-router-dom";
       path: "/settingsItem",
       exact: true,
       element: <SettingsItem />,
+    },
+
+
+
+    {
+      name: "Calendar",
+      path: "/calendar",
+      exact: true,
+      element: <Calendars />,
+    },
+
+    {
+      name: "Projects",
+      path: "/projects",
+      exact: true,
+      element: <Projects />,
+    },
+
+    {
+      name: "Teams",
+      path: "/teams",
+      exact: true,
+      element: <Teams />,
     },
 ])
 

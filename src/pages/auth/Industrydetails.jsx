@@ -17,11 +17,11 @@ const Industrydetails = ({ prevStep, nextStep, handleChange, values }) => {
 
 
   return (
-    <div className='flex flex-col content-center items-center pb-20 scroll-py-60 h-screen w-screen'>
+    <div className='flex flex-col pb-20 scroll-py-60 h-screen w-screen'>
 
       <Navbar />
 
-      <div className="flex flex-col justify-between content-center mt-20 mr-24 h-2/3 w-2/3">
+      <div className="flex flex-col justify-center content-center mt-20 h-2/3 w-full px-32">
 
         <h1 className="font-['Poppins'] font-[700] text-[36px] leading-[54px] text-[#344266] self-start mb-12">
           Set Up Your Live Chat
