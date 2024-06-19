@@ -4,10 +4,12 @@ import Partners from "../pages/Partners";
 import Opportunities from "../pages/Opportunities";
 import About from "../pages/About";
 import NoMatch from "../pages/NoMatch";
+import Contact from "../pages/Contact"
 
 
 
 import Signup from "../pages/auth/Signup"
+import Login from "../pages/auth/Login"
 
 
 
@@ -15,7 +17,8 @@ import Agents from "../pages/dashboard/Agents"
 import Contacts from "../pages/dashboard/Contacts"
 import Dashboard from "../pages/dashboard/Dashboard"
 import Inbox from "../pages/dashboard/Inbox"
-import Logout from "../pages/dashboard/Agents"
+import Logout from "../pages/dashboard/Logout"
+import Schedule from "../pages/schedule/Schedule"
 import Settings from "../pages/dashboard/Settings"
 import SettingsItem from "../pages/dashboard/SettingsItem"
 
@@ -58,6 +61,13 @@ import { createBrowserRouter } from "react-router-dom";
       },
 
     {
+        name: "Contact",
+        path: "/contact",
+        exact: true,
+        element: <Contact />,
+      },
+
+    {
         name: "Partners",
         path: "/partners",
         exact: true,
@@ -79,6 +89,12 @@ import { createBrowserRouter } from "react-router-dom";
       path: "/signup",
       exact: true,
       element: <Signup />,
+    },
+    {
+      name: "Login",
+      path: "/login",
+      exact: true,
+      element: <Login />,
     },
 
 
@@ -119,6 +135,12 @@ import { createBrowserRouter } from "react-router-dom";
       path: "/settings",
       exact: true,
       element: <Settings />,
+    },
+    {
+      name: "Schedule",
+      path: "/schedule",
+      exact: true,
+      element: <Schedule />,
     },
     {
       name: "SettingsItem",

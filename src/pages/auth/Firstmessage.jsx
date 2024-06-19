@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Navbar from '../../components/dashboard/Navbar';
+// import Navbar from '../../components/dashboard/Navbar';
+import Navbar from '../../Layouts/welcome/Navbar';
 
 const Firstmessage = ({ prevStep, nextStep, handleChange, values }) => {
 
@@ -27,7 +28,7 @@ const Firstmessage = ({ prevStep, nextStep, handleChange, values }) => {
         <div className="relative top-1/4 h-2/4 w-1/3 flex flex-col justify-around">
 
           <h1 className="font-['Poppins'] font-[700] text-[36px] leading-[54px] text-[#344266] ml-1/3 mb-12 self-start">
-            Set Up Your First Message
+            Set Up Your Description Message
           </h1>
 
 
@@ -42,13 +43,13 @@ const Firstmessage = ({ prevStep, nextStep, handleChange, values }) => {
           </div>
 
 
+          <button onClick={Previous} className="bg-[#3592FF] rounded py-2 font-semibold text-sm text-white mb-5 mx-0">
+            Previous
+          </button>
+
           <button onClick={Continue} className="bg-[#3592FF] rounded py-2 font-semibold text-sm text-white h-[62px] mb-5 mx-0">
             Continue
           </button>
-
-          {/* <button onClick={Previous} className="bg-[#3592FF] rounded py-2 font-semibold text-sm text-white mb-5 mx-0">
-            Previous
-          </button> */}
 
         </div>
 

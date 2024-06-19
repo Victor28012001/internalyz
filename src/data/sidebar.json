@@ -55,11 +55,11 @@
     {
         "title": "Schedule",
         "icon": "Vector(3).svg",
-        "path": "/Logout"
+        "path": "/schedule"
     },
     {
         "title": "Logout",
         "icon": "Vector(3).svg",
-        "path": "/Logout"
+        "path": "/logout"
     }
 ]

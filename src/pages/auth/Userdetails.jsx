@@ -5,7 +5,8 @@ import picker_icon from '../../assets/color_picker_icon.png'
 import { useState } from 'react';
 
 
-import Navbar from '../../components/dashboard/Navbar';
+// import Navbar from '../../components/dashboard/Navbar';
+import Navbar from '../../Layouts/welcome/Navbar';
 import PhoneUI from '../../components/dashboard/PhoneUI';
 
 
@@ -31,7 +32,7 @@ const Userdetails = ({ nextStep, handleChange, values }) => {
 
     const [file, setFile] = useState(avatar);
 
-    const [name, setName] = useState("Your Name");
+    const [name, setName] = useState("Full Name");
 
 
 
@@ -39,12 +40,12 @@ const Userdetails = ({ nextStep, handleChange, values }) => {
     return (
         <div className='flex flex-col scroll-py-60 h-screen w-screen overflow-y-hidden'>
             <Navbar />
-            <div className='flex flex-row scroll-py-60 h-[80%] w-[100%] bg-red pl-24 mt-[100px]'>
-                <div className="relative h-[80%] w-[60%] flex flex-col justify-start">
+            <div className='flex flex-row scroll-py-60 h-[80%] w-[100%] bg-red pl-24 mt-[100px] relative'>
+                <div className="relative h-[70%] w-[60%] flex flex-col justify-start">
                     <h1 className="font-['Poppins'] font-[700] text-[36px] leading-[54px] text-[#344266] mb-2 self-start">
-                        Set Up Your Live Chat
+                        Set Up Your Profile
                     </h1>
-                    <div className="flex flex-col mb-5 w-[70%]">
+                    <div className="flex flex-col mb-3 w-[70%]">
                         <label className="font-semibold mr-2/3 self-start mb-2">Your Name </label>
                         <input
                             type="text"
@@ -56,36 +57,15 @@ const Userdetails = ({ nextStep, handleChange, values }) => {
                         />
                     </div>
                     <div className="flex flex-col mb-3 w-[70%]">
-                        <label className="font-semibold self-start mb-1">Color Scheme</label>
-                        <ul name="color" id="color" className="flex flex-row justify-between">
-                            <li value="purple" onClick={() => setColor('orange')}className="transition active:border-yellow-600 active:border-[3px]">
-                                <div className=" w-12 h-12 bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full active:border-yellow-600 active:border-[3px]"></div>
-                            </li>
-                            <li value="green" onClick={() => setColor('blue')}>
-                                <div className="w-12 h-12 bg-gradient-to-t from-sky-500 to-indigo-500 rounded-full active:border-blue-600 active:border-[2px]"></div>
-                            </li>
-                            <li value="blue" onClick={() => setColor('green')}>
-                                <div className="w-12 h-12 bg-gradient-to-t from-violet-500 to-fuchsia-500 rounded-full active:border-blue-600 active:border-[2px]"></div>
-                            </li>
-                            <li value="gold" onClick={() => setColor('gold')}>
-                                <div className="w-12 h-12 bg-gradient-to-t from-purple-500 to-pink-500 rounded-full active:border-blue-600 active:border-[2px]"></div>
-                            </li>
-                            <li value="orange" onClick={() => setColor('purple')}>
-                                <div className="w-12 h-12 bg-gradient-to-t from-pink-500 to-purple-500 rounded-full active:border-blue-600 active:border-[2px]"></div>
-                            </li>
-                            <li value="pink" onClick={() => setColor('pink')}>
-                                <div className="w-12 h-12 bg-gradient-to-t from-blue-200 to-blue-500 rounded-full active:border-blue-600 active:border-[2px]"></div>
-                            </li>
-                            <li value="dblue" className="flex flex-row w-12 h-12 bg-green rounded-full">
-                                <img src={picker_icon} alt="" />
-                                <input
-                                    type="color"
-                                    value={values.colorScheme}
-                                    onChange={setColorChange}
-                                    className="absolute cursor-pointer w-10 h-10 rounded-full opacity-[0]"
-                                />
-                            </li>
-                        </ul>
+                        <label className="font-semibold mr-2/3 self-start mb-2">Your Email </label>
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={(e) => {
+                                setName(e.target.value);
+                            }}
+                            className="bg-[#DAEBFF] rounded  h-12 mb-3 pl-2"
+                        />
                     </div>
                     <div className="flex flex-col mb-3 w-[70%]">
                         <label className="font-semibold self-start mb-1">Avatar</label>
@@ -114,7 +94,18 @@ const Userdetails = ({ nextStep, handleChange, values }) => {
                     </div>
 
                     <div className="flex flex-col  mb-3 w-[70%]">
-                        <label className="font-semibold self-start mb-1">Language</label>
+                        <label className="font-semibold self-start mb-1">Password</label>
+                        <input
+                            type="text"
+                            value={values.language}
+                            onChange={handleChange('language')}
+                            className="bg-[#DAEBFF] rounded mb-3 h-12 pl-2"
+                        />
+                    </div>
+
+
+                    <div className="flex flex-col  mb-3 w-[70%]">
+                        <label className="font-semibold self-start mb-1">Confirm Password</label>
                         <input
                             type="text"
                             value={values.language}

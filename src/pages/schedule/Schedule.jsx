@@ -1,13 +1,13 @@
 import React from 'react'
 import Dashboards from '../../Layouts/dashboard/Dashboards';
 
-const Logout = () => {
+const Schedule = () => {
 
   return (
     <Dashboards>
       
-      {/* <div class="flex justify-center p-24 bg-gray-100">
-        <div class="bg-white rounded-lg w-2/3 lg:w-1/2 xl:w-1/3 p-4 shadow">
+      <div class="flex justify-center p-2 bg-gray-100 w-[80%] h-[100%]">
+        <div class="bg-white rounded-lg w-2/3 lg:w-1/2 xl:w-2/3 p-4 shadow h-[90%]">
           <div>
             <span class="text-gray-900 relative inline-block date uppercase font-medium tracking-widest">Wednesday 8</span>
             <div class="flex mb-2">
@@ -78,9 +78,9 @@ const Logout = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </Dashboards>
   )
 }
 
-export default Logout
+export default Schedule

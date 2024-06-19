@@ -8,7 +8,7 @@ const Projects = () => {
             <div className="flex flex-wrap -mx-3 mb-5">
                 <div className="w-full max-w-full px-3 mb-6  mx-auto">
                     <div className="relative flex-[1_auto] flex flex-col break-words min-w-0 bg-clip-border rounded-[.95rem] bg-white m-5">
-                        <div className="relative flex flex-col min-w-0 break-words border border-dashed bg-clip-border rounded-2xl border-stone-200 bg-light/30">
+                        <div className="relative flex flex-col min-w-0 break-words border border-dashed pb-4 bg-clip-border rounded-2xl border-stone-200 bg-light/30">
                             {/* <!-- card header --> */}
                             <div className="px-9 pt-5 flex justify-between items-stretch flex-wrap min-h-[70px] pb-0 bg-transparent">
                                 <h3 className="flex flex-col items-start justify-center m-2 ml-0 font-medium text-xl/tight text-dark">
@@ -219,7 +219,43 @@ const Projects = () => {
                                     </table>
                                 </div>
                             </div>
+                            <div className="max-w-2xl mx-auto mb-2">
+
+                                <nav aria-label="Page navigation example">
+                                    <ul className="inline-flex -space-x-px">
+                                        <li>
+                                            <Link to="#"
+                                                className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 ml-0 rounded-l-lg leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="#"
+                                                className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="#"
+                                                className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="#" aria-current="page"
+                                                className="bg-blue-50 border border-gray-300 text-blue-600 hover:bg-blue-100 hover:text-blue-700  py-2 px-3 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="#"
+                                                className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="#"
+                                                className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</Link>
+                                        </li>
+                                        <li>
+                                            <Link to="#"
+                                                className="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 rounded-r-lg leading-tight py-2 px-3 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</Link>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
